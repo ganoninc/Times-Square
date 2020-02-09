@@ -1,2 +1,19 @@
 // Load CSS Reset from NPM
-@import "~normalize.css"
+@import "~normalize.css";
+
+body {
+  padding: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+a {
+  color: #386ca8;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.25s;
+}
+
+a:hover {
+  color: #307fda;
+  text-decoration: underline;
+}
