@@ -71,6 +71,9 @@ a:hover {
 
 .main-links {
   margin-left: 25px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 
   @include media-breakpoint-down(sm) {
     margin-left: -15px;
@@ -92,39 +95,60 @@ a:hover {
     .main-link__body {
       height: 175px;
       border: 1px solid lightgray;
-      border-radius: 3px;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-      align-content: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
+      border-radius: 4px;
       transition: all 0.25s;
+      overflow: hidden;
+      position: relative;
+
+      .main-link__background {
+        z-index: 0;
+        position: absolute;
+      }
 
       .main-link__title {
-        color: black;
-        font-weight: bold;
-        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
+        font-weight: bold;
+        font-size: 1.75rem;
         padding: 5px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
       }
     }
 
     .main-link__body:hover {
       box-shadow: 1px 1px 7px #d4d4d4;
       transform: scale(1.025);
+    }
+  }
+
+  .main-link--resume {
+    .main-link__body {
+      background: radial-gradient(ellipse at center, #145885 0%, #170101 100%);
+
+      .main-link__title {
+        color: white;
+      }
+    }
+  }
+
+  .main-link--flowtos {
+    .main-link__body {
+      .main-link__title {
+        color: #2d353e;
+      }
+
+      .main-link__background {
+        filter: blur(5px);
+        transform: rotate(-17deg);
+        top: -45px;
+        opacity: 0.5;
+        left: 64px;
+      }
     }
   }
 }
