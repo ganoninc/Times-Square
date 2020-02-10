@@ -151,4 +151,21 @@ a:hover {
       }
     }
   }
+
+  .main-link--blog-vie {
+    .main-link__body {
+      .main-link__title {
+        height: auto;
+        color: #2d353e;
+      }
+
+      .main-link__background {
+        bottom: 0;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+  }
 }
