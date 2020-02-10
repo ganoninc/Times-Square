@@ -38,35 +38,56 @@ a:hover {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+
+  @include media-breakpoint-down(sm) {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
 }
 
 .description {
   white-space: nowrap;
+
+  @include media-breakpoint-down(sm) {
+    white-space: normal;
+  }
 }
 
 .main-links {
-  // display: -ms-flexbox;
-  // display: -webkit-flex;
-  // display: flex;
-  // -webkit-flex-direction: row;
-  // -ms-flex-direction: row;
-  // flex-direction: row;
-  // -webkit-flex-wrap: wrap;
-  // -ms-flex-wrap: wrap;
-  // flex-wrap: wrap;
-  // -webkit-justify-content: flex-start;
-  // -ms-flex-pack: start;
-  // justify-content: flex-start;
-  // -webkit-align-content: flex-start;
-  // -ms-flex-line-pack: start;
-  // align-content: flex-start;
-  // -webkit-align-items: flex-start;
-  // -ms-flex-align: start;
-  // align-items: flex-start;
   margin-left: 25px;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: -15px;
+    margin-top: 25px;
+  }
 
   .main-link {
     padding: 5px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      padding-bottom: 25px !important;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
 
     .main-link__body {
       height: 175px;
@@ -90,6 +111,20 @@ a:hover {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
+      transition: all 0.25s;
+
+      .main-link__title {
+        color: black;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+
+    .main-link__body:hover {
+      box-shadow: 1px 1px 7px #d4d4d4;
+      transform: scale(1.025);
     }
   }
 }
