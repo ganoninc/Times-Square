@@ -172,4 +172,17 @@ a:hover {
       }
     }
   }
+
+  .main-link--winerror-simulator {
+    .main-link__body {
+      .main-link__background {
+        left: 10px;
+        top: 10px;
+
+        img {
+          width: 30%;
+        }
+      }
+    }
+  }
 }

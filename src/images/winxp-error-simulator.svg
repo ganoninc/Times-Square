@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="885px" height="308px" viewBox="0 0 885 308" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#014BE2" stroke-width="7" fill="#E9E7D8" x="0" y="0" width="885" height="308" rx="8"></rect>
+        <rect id="Rectangle" fill="#014BE2" x="3" y="2" width="879" height="78"></rect>
+        <text id="Error" font-family="ArialMT, Arial" font-size="49" font-weight="normal" fill="#FFFFFF">
+            <tspan x="24" y="58">Error</tspan>
+        </text>
+        <circle id="Oval" stroke="#A20000" stroke-width="4" fill="#FF0000" cx="121.5" cy="185.5" r="61.5"></circle>
+        <line x1="90" y1="154" x2="153" y2="217" id="Line" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"></line>
+        <line x1="153" y1="154" x2="90" y2="217" id="Line" stroke="#FFFFFF" stroke-width="6" stroke-linecap="square"></line>
+        <rect id="Rectangle" stroke="#979797" fill="#7B6C70" x="813" y="12" width="54" height="54" rx="8"></rect>
+        <line x1="827.210938" y1="27.2109375" x2="853.789062" y2="53.7890625" id="Line" stroke="#A39498" stroke-width="6" stroke-linecap="square"></line>
+        <line x1="854" y1="27" x2="827" y2="54" id="Line" stroke="#A39498" stroke-width="6" stroke-linecap="square"></line>
+    </g>
+</svg>
