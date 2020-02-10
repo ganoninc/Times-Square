@@ -130,6 +130,10 @@ a:hover {
     .main-link__body {
       background: radial-gradient(ellipse at center, #145885 0%, #170101 100%);
 
+      .main-link__background {
+        opacity: 0.5;
+      }
+
       .main-link__title {
         color: white;
       }
@@ -161,11 +165,11 @@ a:hover {
 
       .main-link__background {
         bottom: 0;
+
         img {
           width: 100%;
         }
       }
     }
-
   }
 }
