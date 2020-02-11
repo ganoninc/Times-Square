@@ -135,15 +135,24 @@ a:hover {
       background: radial-gradient(ellipse at center, #145885 0%, #170101 100%);
 
       .main-link__background {
-        opacity: 0.5;
+        top: 0;
+        transition: all 15s linear;
 
         img {
-          object-fit: cover;
+          opacity: 0.25;
         }
       }
 
       .main-link__title {
         color: white;
+      }
+    }
+  }
+
+  .main-link--resume:hover {
+    .main-link__body {
+      .main-link__background {
+        top: -300px;
       }
     }
   }
