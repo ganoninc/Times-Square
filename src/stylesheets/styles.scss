@@ -175,6 +175,10 @@ a:hover {
 
   .main-link--winerror-simulator {
     .main-link__body {
+      .main-link__title {
+        color: #2d353e;
+      }
+
       .main-link__background {
         left: 10px;
         top: 10px;
@@ -182,6 +186,21 @@ a:hover {
         img {
           width: 30%;
         }
+      }
+    }
+  }
+
+  .main-link--emojis-weather-map {
+    .main-link__body {
+      .main-link__title {
+        color: #2d353e;
+      }
+
+      .main-link__background {
+        width: 110%;
+        height: 110%;
+        top: -10px;
+        left: -2px;
       }
     }
   }
