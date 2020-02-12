@@ -184,7 +184,7 @@ a:hover {
 
   .main-link--blog-vie {
     .main-link__body {
-      background: linear-gradient(0deg, #89bde2, transparent);
+      background: linear-gradient(180deg, #89bde2, transparent);
 
       .main-link__title {
         height: auto;
@@ -199,6 +199,12 @@ a:hover {
           width: 100%;
         }
       }
+    }
+  }
+
+  .main-link--blog-vie:hover {
+    .main-link__body {
+      background: radial-gradient(90vmin circle at 50% 57%, #fff 5%, #ffe460 8%, #ff7519 90%);
     }
   }
 
