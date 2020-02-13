@@ -105,6 +105,7 @@ a:hover {
       transition: all 0.25s;
       overflow: hidden;
       position: relative;
+      background-color: white;
 
       @include media-breakpoint-down(sm) {
         height: 250px;
@@ -158,8 +159,15 @@ a:hover {
       color: #a6cfff;
     }
   }
-}
 
+  .main-link__body {
+    border-color: rgb(127, 127, 127) !important;
+  }
+
+  .main-link__body:hover {
+    box-shadow: 0 0 0 5px #6c8ba6 !important;
+  }
+}
 
 @import "./resume.scss";
 @import "./flowtos.scss";

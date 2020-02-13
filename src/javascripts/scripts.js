@@ -1,5 +1,5 @@
 // Load jQuery from NPM
-import $ from 'jquery';
+// import $ from 'jquery';
 
-window.jQuery = $;
-window.$ = $;
+// window.jQuery = $;
+// window.$ = $;
