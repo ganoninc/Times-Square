@@ -81,11 +81,13 @@ a:hover {
   }
 
   .main-link {
-    padding: 5px;
+    padding: 10px;
 
     @include media-breakpoint-down(sm) {
       padding: 0;
       padding-bottom: 25px !important;
+      padding-right: 15px;
+      padding-left: 15px;
     }
 
     a:hover {
