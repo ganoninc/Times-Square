@@ -136,6 +136,31 @@ a:hover {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: #ddd;
+  }
+
+  .img-thumbnail {
+    background-color: #222;
+    border-color: #444;
+  }
+
+  .text-muted {
+    color: #8a9096 !important;
+  }
+
+  a {
+    color: #569def;
+
+    &:hover {
+      color: #a6cfff;
+    }
+  }
+}
+
+
 @import "./resume.scss";
 @import "./flowtos.scss";
 @import "./blog-vie.scss";
