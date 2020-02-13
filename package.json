@@ -1,36 +1,33 @@
 {
-  "name": "static-site-boilerplate",
-  "description": "A modern boilerplate for static website development",
-  "version": "1.1.0",
-  "homepage": "http://staticsiteboilerplate.com",
+  "name": "times-square",
+  "description": "The homepage of my personal website https://giovanetti.fr/",
+  "version": "1.0.25",
+  "homepage": "https://giovanetti.fr/",
   "author": {
-    "name": "Eric Alli",
-    "url": "http://ericalli.com"
+    "name": "Romain Giovanetti",
+    "url": "https://giovanetti.fr/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericalli/static-site-boilerplate.git"
+    "url": "git+https://github.com/ganoninc/Times-Square.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ericalli/static-site-boilerplate/issues"
+    "url": "https://github.com/ganoninc/Times-Square/issues"
   },
   "keywords": [
-    "html5",
-    "css3",
-    "es6",
+    "times",
+    "square",
+    "homepage",
     "frontend",
     "sass",
-    "less",
     "static",
-    "boilerplate",
     "webpack"
   ],
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
     "start:dist": "cross-env NODE_ENV=production webpack-dev-server --config ./config/webpack.config.js && http-server ./dist -o",
     "setup": "node ./config/site.setup.js",
-    "postinstall": "node ./config/site.setup.js",
     "lint:js": "./node_modules/.bin/eslint \"src/**/*.js\"",
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "build:dist": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
