@@ -1,7 +1,18 @@
 .main-link--emojis-weather-map {
   .main-link__body {
     .main-link__title {
-      color: #2d353e;
+      flex-direction: column;
+
+      img {
+        display: block;
+        box-shadow: 0 0 30px 25px white;
+        border-radius: 25px;
+      }
+
+      span {
+        display: block;
+        color: #2d353e;
+      }
     }
 
     .main-link__background {
@@ -9,6 +20,11 @@
       height: 110%;
       top: -10px;
       left: -2px;
+
+      .emoji {
+        display: inline-block;
+        opacity: 0.5;
+      }
     }
   }
 }
