@@ -21,10 +21,12 @@
 .main-link--winerror-simulator {
   .main-link__body {
     background-color: #e9e7d8;
+    background-image: url("/images/windows-xp-wallpaper.jpg");
+    background-position: bottom;
+    background-size: cover;
 
     .main-link__title {
-      color: #2d353e;
-      font-family: monospace;
+      color: white;
       font-size: 1.6rem;
       align-items: flex-end !important;
     }
