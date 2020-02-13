@@ -13,7 +13,7 @@
   @for $i from 1 through 50 {
     &:nth-child(#{$i}) {
       top: #{8 + $i * 1.25}px !important;
-      left: #{7.5 + $i * 2.5}px !important;
+      left: #{7.5 + $i * 2}px !important;
     }
   }
 }
@@ -27,7 +27,7 @@
 
     .main-link__title {
       color: white;
-      font-size: 1.6rem;
+      font-size: 1.4rem !important;
       align-items: flex-end !important;
     }
 

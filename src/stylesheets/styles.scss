@@ -64,13 +64,17 @@ a:hover {
 .description {
   white-space: nowrap;
 
+  .description__picture {
+    display: block;
+  }
+
   @include media-breakpoint-down(sm) {
     white-space: normal;
   }
 }
 
 .main-links {
-  margin-left: 25px;
+  margin-left: 50px;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -95,9 +99,9 @@ a:hover {
     }
 
     .main-link__body {
-      height: 175px;
+      height: 200px;
       border: 1px solid lightgray;
-      border-radius: 4px;
+      border-radius: 5px;
       transition: all 0.25s;
       overflow: hidden;
       position: relative;
