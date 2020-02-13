@@ -163,12 +163,11 @@ a:hover {
       }
 
       .main-link__background {
-        transition: top 4s ease-in-out;
-        filter: blur(3px);
-        transform: rotate(-15deg);
-        top: -35px;
+        transition: top 5s linear, left 5s linear;
+        filter: blur(5px);
+        top: 0;
         opacity: 0.5;
-        left: 25px;
+        left: 0;
       }
     }
   }
@@ -176,7 +175,8 @@ a:hover {
   .main-link--flowtos:hover {
     .main-link__body {
       .main-link__background {
-        top: -350px;
+        top: -500px;
+        left: -500px;
       }
     }
   }
