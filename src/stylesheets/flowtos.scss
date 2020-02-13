@@ -1,0 +1,25 @@
+.main-link--flowtos {
+  .main-link__body {
+    .main-link__title {
+      color: #2d353e;
+      font-size: 1.75rem !important;
+    }
+
+    .main-link__background {
+      transition: top 1.25s ease-out, left 1.25s ease-out;
+      top: 0;
+      opacity: 0.5;
+      left: 0;
+    }
+  }
+}
+
+.main-link--flowtos:hover {
+  .main-link__body {
+    .main-link__background {
+      transition: top 4s ease-out, left 4s ease-out;
+      top: -500px;
+      left: -500px;
+    }
+  }
+}

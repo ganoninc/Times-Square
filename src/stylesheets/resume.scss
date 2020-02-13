@@ -1,0 +1,27 @@
+.main-link--resume {
+  .main-link__body {
+    background: radial-gradient(ellipse at center, #145885 0%, #170101 100%);
+
+    .main-link__background {
+      top: 0;
+      transition: all 1.25s ease-out;
+
+      img {
+        opacity: 0.35;
+      }
+    }
+
+    .main-link__title {
+      color: white;
+    }
+  }
+}
+
+.main-link--resume:hover {
+  .main-link__body {
+    .main-link__background {
+      top: -300px;
+      transition: all 15s linear;
+    }
+  }
+}

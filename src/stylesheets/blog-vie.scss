@@ -1,0 +1,26 @@
+.main-link--blog-vie {
+  .main-link__body {
+    background: linear-gradient(#89bde2, white);
+
+    .main-link__title {
+      height: auto;
+      color: #2d353e;
+      font-family: 'Sriracha', cursive;
+      align-items: flex-start !important;
+    }
+
+    .main-link__background {
+      bottom: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.main-link--blog-vie:hover {
+  .main-link__body {
+    background: radial-gradient(90vmin circle at 50% 57%, #fff 5%, #ffe460 8%, #ff7519 90%);
+  }
+}

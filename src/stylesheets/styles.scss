@@ -2,26 +2,6 @@
 //@import "~normalize.css";
 @import "~bootstrap/scss/bootstrap";
 
-@mixin winerror-simulator-error-window-initial-states {
-  @for $i from 1 through 50 {
-    &:nth-child(#{$i}) {
-      transition: all 0.5s 0.2s linear;
-      top: 10px;
-      left: 10px;
-      z-index: #{$i};
-    }
-  }
-}
-
-@mixin winerror-simulator-error-window-hover-states {
-  @for $i from 1 through 50 {
-    &:nth-child(#{$i}) {
-      top: #{8 + $i * 1.25}px !important;
-      left: #{7.5 + $i * 2.5}px !important;
-    }
-  }
-}
-
 body {
   padding: 25px;
   font-family: 'Roboto Condensed', sans-serif;
@@ -148,129 +128,10 @@ a:hover {
       box-shadow: 0 0 0 5px #b1d9fc;
     }
   }
-
-  .main-link--resume {
-    .main-link__body {
-      background: radial-gradient(ellipse at center, #145885 0%, #170101 100%);
-
-      .main-link__background {
-        top: 0;
-        transition: all 15s linear;
-
-        img {
-          opacity: 0.25;
-        }
-      }
-
-      .main-link__title {
-        color: white;
-      }
-    }
-  }
-
-  .main-link--resume:hover {
-    .main-link__body {
-      .main-link__background {
-        top: -300px;
-      }
-    }
-  }
-
-  .main-link--flowtos {
-    .main-link__body {
-      .main-link__title {
-        color: #2d353e;
-      }
-
-      .main-link__background {
-        transition: top 6s linear, left 6s linear;
-        filter: blur(5px);
-        top: 0;
-        opacity: 0.5;
-        left: 0;
-      }
-    }
-  }
-
-  .main-link--flowtos:hover {
-    .main-link__body {
-      .main-link__background {
-        top: -500px;
-        left: -500px;
-      }
-    }
-  }
-
-  .main-link--blog-vie {
-    .main-link__body {
-      background: linear-gradient(180deg, #89bde2, transparent);
-
-      .main-link__title {
-        height: auto;
-        color: #2d353e;
-        font-family: 'Sriracha', cursive;
-      }
-
-      .main-link__background {
-        bottom: 0;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .main-link--blog-vie:hover {
-    .main-link__body {
-      background: radial-gradient(90vmin circle at 50% 57%, #fff 5%, #ffe460 8%, #ff7519 90%);
-    }
-  }
-
-  .main-link--winerror-simulator {
-    .main-link__body {
-      background-color: #e9e7d8;
-
-      .main-link__title {
-        color: #2d353e;
-        font-family: monospace;
-        font-size: 1.5rem;
-        align-items: flex-end;
-      }
-
-      .main-link__background {
-        width: 100%;
-        height: 100%;
-
-        .winerror-simulator-error-window {
-          display: block;
-          position: absolute;
-          width: 40%;
-
-          @include winerror-simulator-error-window-initial-states;
-        }
-      }
-    }
-  }
-
-  .main-link--winerror-simulator:hover {
-    .winerror-simulator-error-window {
-      @include winerror-simulator-error-window-hover-states;
-    }
-  }
-
-  .main-link--emojis-weather-map {
-    .main-link__body {
-      .main-link__title {
-        color: #2d353e;
-      }
-
-      .main-link__background {
-        width: 110%;
-        height: 110%;
-        top: -10px;
-        left: -2px;
-      }
-    }
-  }
 }
+
+@import "./resume.scss";
+@import "./flowtos.scss";
+@import "./blog-vie.scss";
+@import "./winerror-simulator.scss";
+@import "./emojis-weather-map.scss";
