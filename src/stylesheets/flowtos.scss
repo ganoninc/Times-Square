@@ -8,7 +8,8 @@
     .main-link__background {
       transition: top 1.25s ease-out, left 1.25s ease-out;
       top: 0;
-      opacity: 0.5;
+      opacity: 0.25;
+      filter: blur(3px);
       left: 0;
     }
   }
@@ -17,7 +18,7 @@
 .main-link--flowtos:hover {
   .main-link__body {
     .main-link__background {
-      transition: top 4s ease-out, left 4s ease-out;
+      transition: top 8s linear, left 8s linear;
       top: -500px;
       left: -500px;
     }
