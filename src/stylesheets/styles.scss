@@ -116,6 +116,19 @@ a:hover {
         position: absolute;
       }
 
+      .main-link__notice {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 2px 75px;
+        z-index: 2;
+        position: absolute;
+        background-color: red;
+        transform: rotate(-30deg);
+        color: white;
+        top: 24px;
+        left: -68px;
+      }
+
       .main-link__title {
         display: flex;
         align-items: center;
