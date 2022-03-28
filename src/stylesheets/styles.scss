@@ -118,16 +118,29 @@ a:hover {
       }
 
       .main-link__notice {
+        // text-align: center;
+        // font-size: 1.2rem;
+        // padding: 2px 75px;
+        // z-index: 2;
+        // position: absolute;
+        // background-color: #d90a0a;
+        // transform: rotate(-30deg);
+        // color: white;
+        // top: 24px;
+        // left: -68px;
+
+        // Hello Sydney!
         text-align: center;
         font-size: 1.2rem;
-        padding: 2px 75px;
+        padding: 4px 87px;
         z-index: 2;
         position: absolute;
-        background-color: red;
-        transform: rotate(-30deg);
+        background-color: #d90a0a;
+        transform: rotate(-25deg);
         color: white;
-        top: 24px;
-        left: -68px;
+        top: 25px;
+        left: -83px;
+        box-shadow: 0 1px 2px 0 #8a8a8a82;
       }
 
       .main-link__title {
