@@ -30,6 +30,7 @@ module.exports = {
     open: true,
     port: config.port,
     host: config.dev_host,
+    hot: true,
   },
   module: {
     rules: loaders,

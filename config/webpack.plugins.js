@@ -18,9 +18,6 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 const config = require('./site.config');
 
-// Hot module replacement
-const hmr = new webpack.HotModuleReplacementPlugin();
-
 // Optimize CSS assets
 const optimizeCss = new CssMinimizerPlugin({
   // assetNameRegExp: /\.css$/g,
@@ -148,6 +145,5 @@ module.exports = [
   config.env === 'production' && sitemap,
   config.googleAnalyticsUA && google,
   webpackBar,
-  config.env === 'development' && hmr,
   new ESLintPlugin(),
 ].filter(Boolean);
