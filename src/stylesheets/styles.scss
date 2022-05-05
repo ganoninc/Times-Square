@@ -1,6 +1,8 @@
+@use "sass:meta";
+@import "~bootstrap/scss/bootstrap";
+
 // Load CSS Reset from NPM
 // @import "~normalize.css";
-@import "~bootstrap/scss/bootstrap";
 
 body {
   padding: 25px;
@@ -180,8 +182,8 @@ a:hover {
   }
 }
 
-@import "./resume.scss";
-@import "./flowtos.scss";
-@import "./blog-vie.scss";
-@import "./winerror-simulator.scss";
-@import "./emojis-weather-map.scss";
+@include meta.load-css("resume.scss");
+@include meta.load-css("flowtos.scss");
+@include meta.load-css("blog-vie.scss");
+@include meta.load-css("winerror-simulator.scss");
+@include meta.load-css("emojis-weather-map.scss");
