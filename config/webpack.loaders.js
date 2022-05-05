@@ -27,7 +27,7 @@ const js = {
       loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
-        plugins: [new ESLintPlugin()]
+        // plugins: [new ESLintPlugin()]
       },
     },
   ],
