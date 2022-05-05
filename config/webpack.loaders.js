@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const config = require('./site.config');
 
 // Define common loader constants
@@ -26,9 +27,9 @@ const js = {
       loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
+        plugins: [new ESLintPlugin()]
       },
     },
-    'eslint-loader',
   ],
 };
 
@@ -47,9 +48,9 @@ const cssLoader = {
 const postcssLoader = {
   loader: 'postcss-loader',
   options: {
-    plugins: [
-      require('autoprefixer')(),
-    ],
+    // plugins: [
+    //   require('autoprefixer')(),
+    // ],
     sourceMap,
   },
 };
@@ -118,7 +119,7 @@ const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   exclude: /fonts/,
   use: [
-    'file-loader?name=images/[name].[hash].[ext]',
+    'file-loader?name=images/[name].[fullhash].[ext]',
     config.env === 'production' ? imageLoader : null,
   ].filter(Boolean),
 };
@@ -130,8 +131,8 @@ const fonts = {
   use: [
     {
       loader: 'file-loader',
-      query: {
-        name: '[name].[hash].[ext]',
+      options: {
+        name: '[name].[fullhash].[ext]',
         outputPath: 'fonts/',
       },
     },
@@ -144,8 +145,8 @@ const videos = {
   use: [
     {
       loader: 'file-loader',
-      query: {
-        name: '[name].[hash].[ext]',
+      options: {
+        name: '[name].[fullhash].[ext]',
         outputPath: 'images/',
       },
     },
