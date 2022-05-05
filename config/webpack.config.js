@@ -13,6 +13,7 @@ module.exports = {
   output: {
     path: path.join(config.root, config.paths.dist),
     publicPath: '',
+    assetModuleFilename: 'images/[hash][ext][query]',
     filename: '[name].[fullhash].js',
   },
   mode: ['production', 'development'].includes(config.env)

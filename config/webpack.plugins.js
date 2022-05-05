@@ -13,6 +13,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // const RobotstxtPlugin = require('robotstxt-webpack-plugin');
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 
 const config = require('./site.config');
 
@@ -147,4 +149,5 @@ module.exports = [
   config.googleAnalyticsUA && google,
   webpackBar,
   config.env === 'development' && hmr,
+  new ESLintPlugin(),
 ].filter(Boolean);

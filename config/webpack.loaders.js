@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
 const config = require('./site.config');
 
 // Define common loader constants
@@ -24,7 +23,7 @@ const js = {
       loader: 'babel-loader',
       options: {
         presets: ['@babel/preset-env'],
-        // plugins: [new ESLintPlugin()]
+        plugins: [],
       },
     },
   ],
@@ -32,7 +31,7 @@ const js = {
 
 // Style loaders
 const styleLoader = {
-  loader: 'style-loader'
+  loader: 'style-loader',
 };
 
 const cssLoader = {
@@ -76,20 +75,20 @@ const sass = {
   ],
 };
 
-const less = {
-  test: /\.less$/,
-  use: [
-    config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
-    cssLoader,
-    postcssLoader,
-    {
-      loader: 'less-loader',
-      options: {
-        sourceMap,
-      },
-    },
-  ],
-};
+// const less = {
+//   test: /\.less$/,
+//   use: [
+//     config.env === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
+//     cssLoader,
+//     postcssLoader,
+//     {
+//       loader: 'less-loader',
+//       options: {
+//         sourceMap,
+//       },
+//     },
+//   ],
+// };
 
 // Image loaders
 const imageLoader = {
@@ -103,7 +102,7 @@ const imageLoader = {
       optimizationLevel: 7,
     },
     pngquant: {
-      quality: '65-90',
+      quality: [0.65, 0.90],
       speed: 4,
     },
     mozjpeg: {
@@ -115,48 +114,48 @@ const imageLoader = {
 const images = {
   test: /\.(gif|png|jpe?g|svg)$/i,
   exclude: /fonts/,
-  use: [
-    'file-loader?name=images/[name].[fullhash].[ext]',
-    config.env === 'production' ? imageLoader : null,
-  ].filter(Boolean),
+  type: 'asset/resource',
+  use: config.env === 'production' ? [imageLoader] : [],
 };
 
 // Font loaders
-const fonts = {
-  test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-  exclude: /images/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: '[name].[fullhash].[ext]',
-        outputPath: 'fonts/',
-      },
-    },
-  ],
-};
+// const fonts = {
+//   test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+//   exclude: /images/,
+//   type: 'asset/resource',
+//   use: [
+//     // {
+//     //   loader: 'file-loader',
+//     //   options: {
+//     //     name: '[name].[fullhash].[ext]',
+//     //     outputPath: 'fonts/',
+//     //   },
+//     // },
+//   ],
+// };
 
 // Video loaders
-const videos = {
-  test: /\.(mp4|webm)$/,
-  use: [
-    {
-      loader: 'file-loader',
-      options: {
-        name: '[name].[fullhash].[ext]',
-        outputPath: 'images/',
-      },
-    },
-  ],
-};
+// const videos = {
+//   test: /\.(mp4|webm)$/,
+//   use: [
+//     // {
+//     //   loader: 'file-loader',
+//     //   options: {
+//     //     name: '[name].[fullhash].[ext]',
+//     //     outputPath: 'images/',
+//     //   },
+//     // },
+//   ],
+//   type: 'asset/resource',
+// };
 
 module.exports = [
   html,
   js,
   css,
   sass,
-  less,
+  // less,
   images,
-  fonts,
-  videos,
+  // fonts,
+  // videos,
 ];
