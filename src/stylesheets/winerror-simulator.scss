@@ -46,7 +46,7 @@
   }
 }
 
-.main-link--winerror-simulator:hover {
+.main-link--winerror-simulator a:hover {
   .winerror-simulator-error-window {
     @include winerror-simulator-error-window-hover-states;
   }
