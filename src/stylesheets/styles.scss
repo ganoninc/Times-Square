@@ -44,6 +44,7 @@ a:hover {
 
   .description__picture {
     display: block;
+    border-radius: 25.25rem;
   }
 
   @include media-breakpoint-down(sm) {
