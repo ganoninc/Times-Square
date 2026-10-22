@@ -4,7 +4,6 @@ const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
 
-const WebpackBar = require('webpackbar');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -103,9 +102,9 @@ const favicons = new FaviconsWebpackPlugin({
   },
 });
 
-// Webpack bar
-const webpackBar = new WebpackBar({
-  color: '#ff6469',
+// Build progress
+const progress = new webpack.ProgressPlugin({
+  activeModules: true,
 });
 
 // Google analytics
@@ -153,6 +152,6 @@ module.exports = [
   // config.env === 'production' && robots,
   config.env === 'production' && sitemap,
   config.googleAnalyticsUA && google,
-  webpackBar,
+  progress,
   new ESLintPlugin(),
 ].filter(Boolean);

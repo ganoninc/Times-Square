@@ -1,0 +1,10 @@
+allowBuilds:
+  '@parcel/watcher': true
+  cpu-features: true
+  cwebp-bin: true
+  gifsicle: true
+  mozjpeg: true
+  optipng-bin: true
+  pngquant-bin: true
+  sharp: true
+  ssh2: true
